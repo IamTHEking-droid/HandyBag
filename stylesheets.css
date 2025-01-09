@@ -45,10 +45,7 @@ body {
     }
 
     .separateimage {
-        flex-direction: column;
-        width: 100%;
-        gap: 20px;
-        height: auto;
+        align-items:center;
     }
 
     .produktet,
