@@ -51,7 +51,6 @@ body {
     .produktet,
     .om_oss,
     .kontakt {
-        width: 90%;
         padding: 10px;
     }
 
@@ -66,7 +65,8 @@ body {
     }
 
     .kontakt {
+        display:flex;
+        flex-direction: column;
         width: 100%;
-        
     }
 }
