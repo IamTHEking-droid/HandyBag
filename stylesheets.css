@@ -1,73 +1,110 @@
-/* General styles for all devices */
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    font-size: large;
+    font-size: x-large;
     flex-direction: column;
     align-items: center;
 }
 
-/* Styles for larger screens (e.g., desktops) */
-@media (min-width: 768px) {
-    .produktet {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .separateimage {
-        display: flex;
-        flex-direction: row;
-        width: 1200px;
-        justify-content: space-evenly;
-        gap: 100px;
-        height: 100vh;
-    }
-
-    .kontakt {
-        width: 700px;
-    }
+.produktet, .om_oss, .kontakt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%; /* Adjust width for responsiveness */
 }
 
-/* Styles for smaller screens (e.g., phones) */
-@media (max-width: 767px) {
-    .blackbar {
-        width: 100%;
-        height: auto;
-        font-size: large;
-    }
+.separateimage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 100px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh; /* Maintain full height for desktops */
+}
 
-    .aligntogether {
-        flex-direction: column;
-        gap: 5px;
-        text-align: center;
-    }
+.organise {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.item2 {
+    border-radius: 25%;
+    box-shadow: 0px 0px 12px 12px lightblue;
+    width: 50%;
+    height: auto;
+    max-width: 400px; /* Maintain the desktop view */
+}
+
+.orangeborder {
+    border-radius: 50%;
+    box-shadow: 0px 0px 12px 12px lightsalmon;
+    width: 400px;
+    height: auto;
+}
+
+.kontakt {
+    width: 100%;
+    max-width: 700px;
+    height: 100vh; /* Maintain full height for desktops */
+}
+
+.blackbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.aligntogether {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.inarow {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.item3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
     .separateimage {
-        align-items:center;
-    }
-
-    .produktet,
-    .om_oss {
-        padding: 10px;
-    }
-
-    .item2, .orangeborder {
-        width: 100%;
-        height: auto;
-    }
-
-    .inarow {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        width: 100%;
+        height: auto; /* Adjust height for content */
+    }
+
+    .item2 {
+        width: 80%; /* Adjust for smaller screens */
+        max-width: none; /* Remove max-width for smaller screens */
+        box-shadow: 0px 0px 8px 8px lightblue; /* Scale down box shadow */
+    }
+
+    .orangeborder {
+        width: 80%; /* Adjust for smaller screens */
+        max-width: none; /* Remove max-width for smaller screens */
+        box-shadow: 0px 0px 8px 8px lightsalmon; /* Scale down box shadow */
+    }
+
+    .blackbar {
+        height: auto;
+        font-size: large; /* Adjust font size for small screens */
     }
 
     .kontakt {
-        display:flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: space-evenly;
-        
+        width: 90%;
+        height: auto; /* Adjust height for content */
     }
 }
